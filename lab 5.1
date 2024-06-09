@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+   int n, i, dob = 1, count = 0;
+   printf("Введіть кількість елементів масиву-> ");
+   scanf("%d", &n);
+   int array[n];
+   printf("Введіть елементи масиву ");
+   for(i = 0; i < n; i++){
+        scanf("%d", &array[i]);
+        if(array[i] > 0){
+        dob *= array[i];
+        count++;
+       }
+   }
+   if (count)
+   printf("Середнє геометричне з додатніх елементів масиву = %.3f", pow(dob, 1.0/count));
+   else printf("В масиві немає додатніх елементів");
+
+    return 0;
+}
